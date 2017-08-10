@@ -8,7 +8,7 @@ Promise.all([(fs.existsSync('src/blog')?Promise.resolve(true):blogGit.clone('git
 .then(()=>blogGit.cwd('src/blog'))
 .then(()=>blogGit.pull())
 .then(()=>blogGit.reset('hard')),
-(fs.existsSync('src/blog')?Promise.resolve(true):ghPagesGit.clone('git@github.com:AGrzes/AGrzes.github.io.git', 'dst', ['--single-branch']))
+(fs.existsSync('dst')?Promise.resolve(true):ghPagesGit.clone('git@github.com:AGrzes/AGrzes.github.io.git', 'dst', ['--single-branch']))
 .then(()=>ghPagesGit.cwd('dst'))
 .then(()=>ghPagesGit.pull())
 .then(()=>ghPagesGit.reset('hard'))])
