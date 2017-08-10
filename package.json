@@ -1,0 +1,22 @@
+{
+  "name": "agrzes.github.io-generator",
+  "version": "0.0.1",
+  "description": "Gh-pages generation scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AGrzes/AGrzes.github.io.git"
+  },
+  "author": "Grzegorz Abramczyk <abramczykg@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AGrzes/AGrzes.github.io/issues"
+  },
+  "homepage": "https://github.com/AGrzes/AGrzes.github.io#readme",
+  "dependencies": {
+    "personal-site": "git+https://github.com/AGrzes/personal-site.git"
+  }
+}
