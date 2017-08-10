@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AGrzes/AGrzes.github.io#readme",
   "dependencies": {
+    "fs-extra": "^4.0.1",
     "personal-site": "git+https://github.com/AGrzes/personal-site.git",
     "simple-git": "^1.75.0"
   }

@@ -1,5 +1,6 @@
 var git = require('simple-git/promise')
-var fs = require('fs');
+var personalSite = require('personal-site')
+var fs = require('fs-extra');
 var blogGit=git()
 var ghPagesGit=git()
 
@@ -11,4 +12,7 @@ Promise.all([(fs.existsSync('src/blog')?Promise.resolve(true):blogGit.clone('git
 .then(()=>ghPagesGit.cwd('dst'))
 .then(()=>ghPagesGit.pull())
 .then(()=>ghPagesGit.reset('hard'))])
+.then(()=>personalSite(__dirname+'/src',__dirname+'/tmp',null,'http://site.abramczykg.pl/'))
+.then(()=>fs.removeSync('dst/blog'))
+.then(()=>fs.renameSync('tmp/blog','dst/blog'))
 
