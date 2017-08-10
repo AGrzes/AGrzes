@@ -17,3 +17,4 @@ Promise.all([(fs.existsSync('src/blog')?Promise.resolve(true):blogGit.clone('git
 .then(()=>fs.renameSync('tmp/blog','dst/blog'))
 .then(()=>ghPagesGit.add('.'))
 .then(()=>ghPagesGit.commit('Updating blog'))
+.then(()=>ghPagesGit.push())
