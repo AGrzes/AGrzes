@@ -15,4 +15,5 @@ Promise.all([(fs.existsSync('src/blog')?Promise.resolve(true):blogGit.clone('git
 .then(()=>personalSite(__dirname+'/src',__dirname+'/tmp',null,'http://site.abramczykg.pl/'))
 .then(()=>fs.removeSync('dst/blog'))
 .then(()=>fs.renameSync('tmp/blog','dst/blog'))
-
+.then(()=>ghPagesGit.add('.'))
+.then(()=>ghPagesGit.commit('Updating blog'))
